@@ -6,28 +6,66 @@ body {
     overflow-y: hidden;
 }
 
-#main {
+.wrapper {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(../images/background.png) no-repeat 0 0 /cover;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0;
+    background: white;
+}
+
+.tri {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 15px transparent;
+    border-left: 15px black;
+    border-right: 15px transparent;
+    border-bottom: 15px transparent;
+}
+
+#main {
+    position: fixed;
+    content: '';
+    top: 2.5rem;
+    right: 2.5rem;
+    left: 2.5rem;
+    bottom: 2.5rem;
+    background: url('../images/background2.png');
+    overflow: hidden;
 }
 
 .ground {
     position: absolute;
-    width: 1920px;
-    height: 557px;
     background: url('../images/ground.png') no-repeat 0 0 /cover;
-    text-indent: -9999em;
+    width: calc(1920px - 5rem);
+    height: calc(557px - 5rem);
     bottom: 0;
 
 }
 
 .mat {
     position: absolute;
-    width: 1331px;
-    height: 431px;
-    background: url(../images/mat.png) no-repeat 0 0 /cover;
-    text-indent: -9999em;
+    background: url('../images/mat.png') no-repeat 0 0 /cover;
+    width: calc(1331px - 5rem);
+    height: calc(431px - 5rem);
     bottom: 0;
+}
+
+.cat img {
+    width: calc(148px - 2.5rem);
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 25%
+}
+
+.bim img {
+    position: absolute;
+    z-index: 1;
+    width: calc(325px - 2.5rem);
+    z-index: 1;
+    bottom: 5%;
+    left: 35%;
+
 }
