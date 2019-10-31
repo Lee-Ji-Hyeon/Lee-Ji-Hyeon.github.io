@@ -22,7 +22,7 @@ body {
     border-left: 15px solid transparent;
     border-right: 15px solid black;
     border-bottom: 15px solid transparent;
-    right: calc(100% + 1rem);
+    right: calc(100% - 2.75rem);
     top: 50%;
     transform: translate(-50%);
 }
@@ -35,9 +35,18 @@ body {
     border-left: 15px solid black;
     border-right: 15p solid transparent;
     border-bottom: 15px solid transparent;
-    right: 0.25rem;
+    left: calc(100% - 1.25rem);
     top: 50%;
     transform: translate(-50%);
+}
+
+[class^='tri'] {
+    opacity: .5;
+    transition: 0.35s;
+}
+
+[class^='tri']:hover {
+    opacity: 1;
 }
 
 #main {
